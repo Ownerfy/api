@@ -1,0 +1,858 @@
+{
+	"info": {
+		"_postman_id": "76324d09-f5f1-4446-8e89-8f3fa199689c",
+		"name": "Ownerfy API",
+		"description": "Ownerfy NFT API documentation. You must have an authorization token to use this API. For production server root use https://ownerfy.com/api/v1\n\nAPI Bearer keys for production and staging are different. Get your staging keys here:\nhttps://staging.ownerfy.io\nTransactions on staging are deployed on the Mumbai test network.\n\nProduction keys are obtained here:\nhttps://ownerfy.com\nProduction transactions are deployed on the Polygon blockchain. Ethereum transactions are available upon request. Contact support@ownerfy.com for API questions.\n\n**Authorization Header**  \n\"Authorization\" : \"Bearer YOUR_API_KEY\"",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User (Wallet)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9be5da2f-7fbf-4450-b7fa-6fc93e3acaa0",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ed7e2ec0-e932-4310-a841-e4a889883b73",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "9c61328f-8ef2-43a3-af67-34754b2eea69",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@testemail.com\", // Optional - Needed for emailing verification codes from Ownerfy. \n    \"phoneNumber\": \"3234445555\", // Optional\n    \"username\": \"User Name\" // Optional\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server_root}}/api/v1/user/create"
+			},
+			"response": [
+				{
+					"id": "b2ac7e87-790c-42a6-bc79-2de898fc08b1",
+					"name": "Create User No Params",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "{{server_root}}/api/v1/user/create"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				},
+				{
+					"id": "2795adb8-6562-4707-aece-a7a9c58a9db5",
+					"name": "Create User With Optional Data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@testemail.com\",\n    \"phoneNumber\": \"3236521111\",\n    \"username\": \"User Name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server_root}}/api/v1/user/create"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Update User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9be5da2f-7fbf-4450-b7fa-6fc93e3acaa0",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ed7e2ec0-e932-4310-a841-e4a889883b73",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "afc35c43-1029-45a1-9e56-21d2dda4de00",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@testemail.com\", // Optional - Needed for emailing verification codes from Ownerfy. \n    \"phoneNumber\": \"3234445555\", // Optional\n    \"username\": \"User Name\" // Optional\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_root}}/api/v1/user/update/:ownerfyUserId",
+					"host": [
+						"{{server_root}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"update",
+						":ownerfyUserId"
+					],
+					"variable": [
+						{
+							"key": "ownerfyUserId",
+							"value": null,
+							"type": "any"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "093073bc-4db3-44b2-afff-926704433b76",
+					"name": "Create User With Optional Data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@testemail.com\",\n    \"phoneNumber\": \"3236521111\",\n    \"username\": \"User Name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server_root}}/api/v1/user/create"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				},
+				{
+					"id": "a32cb583-2e6e-4c46-a917-2eb948122753",
+					"name": "Create User No Params",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": "{{server_root}}/api/v1/user/create"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get User Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b42f518b-1cec-4ac3-8dc4-85db31176723",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "24fa55c6-3a1f-407a-b384-de8c76353a85",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_root}}/api/v1/user/get/:ownerfyUserId",
+					"host": [
+						"{{server_root}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"get",
+						":ownerfyUserId"
+					],
+					"variable": [
+						{
+							"key": "ownerfyUserId",
+							"value": "qz8uZ21p8d5svnnO34kH",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "68434c6d-af2e-43c9-a20e-2f659862f889",
+					"name": "Get User Default Company User Details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{server_root}}/api/v1/user/get/TX4UduiPsTYhPSoIBWME"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get All Company Created Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0adf8978-e959-4bc6-a233-dbc7819a8d2d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "ea27b1db-9b18-4559-ad39-b00c9cb2bb8a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{server_root}}/api/v1/user/list"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transaction Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c841aa6f-094c-4fc1-b2d8-6a2b1d5bdc2a",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "f2bc4cd2-405a-4077-8565-ab50ae04f24a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_root}}/api/v1/transaction/get/:transactionId",
+					"host": [
+						"{{server_root}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"transaction",
+						"get",
+						":transactionId"
+					],
+					"variable": [
+						{
+							"key": "transactionId",
+							"value": "tHRjCnY4cQUiJ0XoF42A",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get NFTs for Ownerfy User ID",
+			"_postman_id": "47a346f6-e601-444a-b8fb-b20e7486ebc7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_root}}/api/v1/nft/list/ownerfyUserId/:ownerfyUserId",
+					"host": [
+						"{{server_root}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"nft",
+						"list",
+						"ownerfyUserId",
+						":ownerfyUserId"
+					],
+					"variable": [
+						{
+							"key": "ownerfyUserId",
+							"value": null,
+							"type": "any"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get NFTs for Public Address",
+			"_postman_id": "a36355b1-0e6f-4a2e-aea1-44bdf5074215",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_root}}/api/v1/nft/list/address/:address",
+					"host": [
+						"{{server_root}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"nft",
+						"list",
+						"address",
+						":address"
+					],
+					"variable": [
+						{
+							"key": "address",
+							"value": null,
+							"type": "any"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Company Owned NFTs",
+			"_postman_id": "de153aae-e619-4ed0-8f90-372a33092b23",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{server_root}}/api/v1/nft/list"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single NFT Metadata and Current Owner(s)",
+			"_postman_id": "3fdc5540-f5b9-48c3-b786-46927cde52ae",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_root}}/api/v1/nft/get/:contract/:blockchainTokenId/:blockchain?",
+					"host": [
+						"{{server_root}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"nft",
+						"get",
+						":contract",
+						":blockchainTokenId",
+						":blockchain"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					],
+					"variable": [
+						{
+							"key": "contract",
+							"value": null,
+							"description": "Contract must be supplied",
+							"type": "any"
+						},
+						{
+							"key": "blockchainTokenId",
+							"value": null,
+							"description": "Blockchain Token ID",
+							"type": "any"
+						},
+						{
+							"key": "blockchain",
+							"value": null,
+							"description": "Optional - If no blockchain is provided polygon will be used ",
+							"type": "any"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Contracts Created",
+			"_postman_id": "2115b4c6-0136-4f7d-9d15-32d2851c4bdd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{server_root}}/api/v1/collection/get"
+			},
+			"response": []
+		},
+		{
+			"name": "Get QR code to Ownerfy",
+			"_postman_id": "d4659bca-3caf-4565-8d33-907e7ee429fb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_root}}/api/v1/qrcode/ownerfy/:contract/:tokenId",
+					"host": [
+						"{{server_root}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"qrcode",
+						"ownerfy",
+						":contract",
+						":tokenId"
+					],
+					"variable": [
+						{
+							"key": "contract",
+							"value": "0x938bc8b1355F5F14E174Db9A3b8C826344ff7dEd",
+							"type": "string"
+						},
+						{
+							"key": "tokenId",
+							"value": "32786686714",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get QR code to OpenSea",
+			"_postman_id": "e5d9d2c7-a401-475c-8d9e-263aefb2a2a6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_root}}/api/v1/qrcode/opensea/:contract/:tokenId",
+					"host": [
+						"{{server_root}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"qrcode",
+						"opensea",
+						":contract",
+						":tokenId"
+					],
+					"variable": [
+						{
+							"key": "contract",
+							"value": "0x938bc8b1355F5F14E174Db9A3b8C826344ff7dEd",
+							"type": "string"
+						},
+						{
+							"key": "tokenId",
+							"value": "32786686714",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Custom QR",
+			"_postman_id": "30ccf331-9c22-4182-b679-c2366ca061dc",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server_root}}/api/v1/qrcode/:link",
+					"host": [
+						"{{server_root}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"qrcode",
+						":link"
+					],
+					"variable": [
+						{
+							"key": "link",
+							"value": "https://test.com",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mint NFTs",
+			"_postman_id": "2b84a1fe-729f-43c2-b4d5-c08d592b9fa1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // If not supplied this will mint to your default smart contract created with your admin account otherwise use any smart contract you create in the api \n    \"fromOwnerfyUserId\": \"LlZw4R1hwqojvjvcspCm\", // Optional only if using a contract created by a subuser. Only the wallet that created a contract can mint to it.\n    //\"fromAddress\": \"0x037f3812d21c669d3fcc54cdbdea8e3091dd995b\", // Use either this or fromOwnerfyUserId. Only wallets that were created on your account are valid\n    \"nfts\": [ // Up to 10 per request\n        {\n            \"name\": \"test 1\",\n            \"description\": \"test description 1\",\n            \"image\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\",\n            \"attributes\": [\n                {\"trait_type\": \"Level\", \"value\": \"10\"},{\"trait_type\": \"Hair Color\", \"value\": \"Brown\"}\n                ] // Optional attributes show up as separate parsable values. Values can be numbers but must always be in quotes as strings. Any number of attributes can be added. This is the standard NFT metadata format for attributes.\n        },\n        {\n            \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // Contract can be specified per NFT as well\n            \"toAddress\": \"0xd6d6796c84ca569a54cb82337b31a7e4d27b32af\", // Ether send to an ETH address or OwnerfyUserId - External Addresses OK\n            //\"toOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\", // Optionally mint directly to a user\n            \"name\": \"test 2\",\n            \"description\": \"test description 2\",\n            \"image\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\",\n            \"clientTokenId\": 12348 // Optional marker that will be passed back\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server_root}}/api/v1/nft/create"
+			},
+			"response": [
+				{
+					"id": "921b5fcd-bfdb-441d-baa9-3d01344c188e",
+					"name": "Mint an NFT to a previously created user account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n    \"nfts\": [\n        {\n            \"toOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\",\n            \"name\": \"test mint B\",\n            \"description\": \"test description B\",\n            \"image\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server_root}}/api/v1/nft/create"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				},
+				{
+					"id": "d0647c99-39d4-471e-abc3-651cbe64c1df",
+					"name": "Mint an NFT and leave it in the company account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n    \"nfts\": [\n        {\n            \"name\": \"test mint A\",\n            \"description\": \"test description A\",\n            \"image\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\"\n        },\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server_root}}/api/v1/nft/create"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Transfer NFT",
+			"_postman_id": "cff803ef-5c4c-49ce-826e-2f54bc0deccb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // Specifiy contract for all or override below\n    \"fromOwnerfyUserId\": \"LlZw4R1hwqojvjvcspCm\", // Only the wallet that owns a token can send it.\n    //\"fromAddress\": \"0x037f3812d21c669d3fcc54cdbdea8e3091dd995b\", // Use either this or fromOwnerfyUserId.\n    \"nfts\": [ // Up to 10 at a time\n        {\n            \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n            \"blockchainTokenId\": \"12387344\", \n            \"toAddress\": \"0xc0faB703eBB1EF59a015b921D04232bEcb1Bc5B1\", // Can use any external ethereum or polygon address\n            // Optionally use this or toOwnerfyUserId\n            //\"toOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\",  // Optionally use this or to address\n            \"fromAddress\": \"0x037f3812d21c669d3fcc54cdbdea8e3091dd995b\" // Must be a managed from address. Overrides parent from address.\n            //\"fromOwnerfyUserId\": \"LlZw4R1hwqojvjvcspCm\" // Overrides parent key\n            \n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server_root}}/api/v1/nft/transfer"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Verification Code to NFT Owner",
+			"_postman_id": "350cc242-ac1e-4772-918d-75a7b652253f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // Contract of the NFT to be validated\n    \"blockchainTokenId\": \"12341134\" // Token of the NFT to be validated\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server_root}}/api/v1/nft/sendVerificationCode"
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Code That Was Sent to An NFT Owner Copy",
+			"_postman_id": "7d5ce95d-80b4-49c6-aa80-373cf747b207",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // Contract of the NFT to be validated\n    \"blockchainTokenId\": \"12341134\", // Token of the NFT to be validated\n    \"code\": \"654321\" // Code that was sent to the owner. It should be coming from a party trying to verify ownership. This party should have attained the code from the owner. Expires after 24 hours.\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server_root}}/api/v1/nft/verifyCode"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Collection (Smart Contract)",
+			"_postman_id": "2dd66323-83ca-457d-8074-0bf079c598ee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n      \"name\": \"Test 1\",\n      \"contractType\": \"unlimited_v1\" // Optional\n      // \"fromOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\" // Optionally mint from user account\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{server_root}}/api/v1/collection/create"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "6ed0fa68-e71e-414f-bba3-d9a7edff5a99",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "72c5c3f1-b03d-43f3-8fda-a039c6d89d35",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "16f75337-8b6d-4abe-b995-522b5e1366bd",
+			"key": "dev_token",
+			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
+			"type": "string"
+		},
+		{
+			"id": "9c3ed08c-b30f-4840-94bd-2f56d2da6394",
+			"key": "api_root",
+			"value": "https://ownerfy.com",
+			"type": "string"
+		},
+		{
+			"id": "da197bc8-beef-4412-8ae1-7c6c9012e6ab",
+			"key": "local_root",
+			"value": "http://localhost:5000/receiptchain-dev/us-central1/app",
+			"type": "string"
+		},
+		{
+			"id": "2326de55-6e37-40e5-83f0-33d6538a505d",
+			"key": "prod_token",
+			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
+			"type": "string"
+		},
+		{
+			"id": "8dd2d481-0e20-4b34-8eb1-57c2bb965a8f",
+			"key": "place_holder_token",
+			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
+			"type": "string"
+		},
+		{
+			"id": "1acad51f-8d7d-4312-a828-064902666c38",
+			"key": "server_root",
+			"value": "https://ownerfy.com/api/v1",
+			"type": "string"
+		}
+	]
+}
