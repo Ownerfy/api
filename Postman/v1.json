@@ -810,6 +810,18 @@
 		},
 		{
 			"name": "Transfer NFT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b53668c-46bd-4947-865c-ecd2840b00d9",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "cff803ef-5c4c-49ce-826e-2f54bc0deccb",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -945,34 +957,34 @@
 	],
 	"variable": [
 		{
-			"id": "dbcb89b5-9c61-408a-a77a-cf73b72eeed7",
+			"id": "d616c4f0-19f6-4432-b4c8-a697819aacf9",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "69228d39-abb6-4abb-9a21-449a93fb6a67",
+			"id": "52434e5d-b223-4848-90ca-94d0624659f2",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "7bf7e360-5751-4552-b626-7d6652db95c3",
+			"id": "623b0171-7286-474f-a6e4-9706a59ddb4c",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "d669dbb7-36a3-429c-acd6-a5f71a609f43",
+			"id": "9e8d808f-9dc0-497e-9747-9744434e6748",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "abe0f9a5-2422-4727-a9a1-2235d704c22a",
+			"id": "e8ed2b67-e307-495a-a3e8-07e14dd42e4e",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "928958e4-d355-4d7f-8a9b-ad9c2b37ba95",
+			"id": "d7cd6c4d-3eee-4be3-b9dd-40b21c1e4491",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
