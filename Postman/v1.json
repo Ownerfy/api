@@ -47,7 +47,7 @@
 					}
 				},
 				"url": "{{server_root}}/api/v1/user/create",
-				"description": "All body parameters are optional, but without an email we will not send an email for code verification. Code verification numbers can still be generated without email."
+				"description": "All body parameters are optional, but without an email we will not send an email for code verification. Code verification numbers can still be generated without email.\n\n```\n{\n    \"email\": \"test@email.com\", // Optional - Needed for emailing verification codes from Ownerfy. \n    \"phoneNumber\": \"3334445555\", // Optional\n    \"username\": \"User Name\" // Optional\n}\n\n```"
 			},
 			"response": [
 				{
@@ -807,34 +807,34 @@
 	],
 	"variable": [
 		{
-			"id": "caaf7f24-e723-4249-9b60-07916d1bb8f6",
+			"id": "f7cf691d-0398-4b66-99ec-3a7a3dc871c0",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "970fbe1b-a149-4847-af3e-4c2bd2ce735c",
+			"id": "b2835854-f093-4b3f-9cdb-4a16756de13f",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "42b72ec1-5357-4153-91bc-3f2b2a8eeb86",
+			"id": "367e56c3-4703-4ea7-9f55-484ed874caa2",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "f4d27b4c-ffe8-4774-a2aa-94a17f2597d6",
+			"id": "a90530bd-b29c-4575-82f0-51cfeec1b4ee",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "f6079a2d-e59c-499a-9863-0749304588e7",
+			"id": "26e4e691-64f8-41e7-8282-47766f1be2f5",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "ff614f46-c4e5-4a33-a04f-e62f0ec12b3e",
+			"id": "8ff56730-372a-4b09-bfcf-9fc19ae75606",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
