@@ -289,6 +289,16 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "44efd29b-9c64-4450-bfac-aba1e4b4363f",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
 			"id": "ea27b1db-9b18-4559-ad39-b00c9cb2bb8a",
@@ -817,34 +827,34 @@
 	],
 	"variable": [
 		{
-			"id": "07823d4d-172e-4295-85e4-1c64de96e087",
+			"id": "aa8c83c0-be30-42e8-8367-38d49b35e2ec",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "e971bb49-04d9-4639-81a9-69ef63225581",
+			"id": "7643844b-df04-4f47-a489-056f2d873e91",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "a174cd3f-a5eb-4c10-b465-0e421e3b5254",
+			"id": "a331f297-5d1d-4f28-b1c3-228706059214",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "17acfbe2-3796-4125-ae66-109a467cb05e",
+			"id": "bf5476c6-f585-4314-b989-65dd4dc5def7",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "aadbfdeb-9edb-4a14-9b13-8c5960784efa",
+			"id": "e29bb216-11e4-4dc4-a370-8ddbcf19d150",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "8181b162-9836-4f19-8ff9-d4a51dff791b",
+			"id": "7b8161ab-7a0a-4e12-8e82-f6e3e608c3dc",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
