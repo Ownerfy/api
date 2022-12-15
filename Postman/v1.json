@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "76324d09-f5f1-4446-8e89-8f3fa199689c",
 		"name": "Ownerfy API",
-		"description": "Ownerfy NFT API documentation. You must have an authorization token to use this API. For production server root use https://ownerfy.com/api/v1\n\nAPI Bearer keys for production and staging are different. Get your staging keys here:\nhttps://staging.ownerfy.io\nTransactions on staging are deployed on the Mumbai test network.\n\nProduction keys are obtained here:\nhttps://ownerfy.com\nProduction transactions are deployed on the Polygon blockchain. Ethereum transactions are available upon request. Contact support@ownerfy.com for API questions.\n\n**Authorization Header**  \n\"Authorization\" : \"Bearer YOUR_API_KEY\"",
+		"description": "Ownerfy NFT API documentation. You must have an authorization token to use this API. For production server root use [https://ownerfy.com/api/v1](https://ownerfy.com/api/v1)\n\nAPI Bearer keys for production and staging are different. Get your staging keys here:  \n[https://staging.ownerfy.io](https://staging.ownerfy.io)  \nTransactions on staging are deployed on the Mumbai test network.\n\nProduction keys are obtained here:  \n[https://ownerfy.com](https://ownerfy.com)  \nProduction transactions are deployed on the Polygon blockchain. Ethereum transactions are available upon request. Contact [support@ownerfy.com](mailto:support@ownerfy.com) for API questions.\n\nRemember to:\n\n- Use the correct bearer token for your environment\n- Do not include comments in json body requests\n    \n\n**Authorization Header**  \n\"Authorization\" : \"Bearer YOUR_API_KEY\"",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -993,34 +993,34 @@
 	],
 	"variable": [
 		{
-			"id": "828da6fe-0e79-46b1-a83d-715a20dfe403",
+			"id": "4abbfe22-0b61-4955-9a55-ae9b31a5682a",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "e0faa8e5-b797-49f8-a374-a6637410d611",
+			"id": "14b3e1c1-cd2a-4260-804f-dc9e7ef7ca50",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "d06b6987-d467-42e0-9cc5-c2a4fccf1999",
+			"id": "c89d6019-1040-4ddf-b55c-d5c4612b14a8",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "98b1bcff-f024-4dd9-8f2f-aecc1a90a770",
+			"id": "9793a406-dc1a-4dff-81a1-a4902cb3e791",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "71908087-b609-43e3-9aa8-f2c4881638f2",
+			"id": "8899b86a-97ec-4b74-8a88-adab1589cc46",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "9362b3b0-6d1a-4d79-b20a-2b2ed23988b9",
+			"id": "e4bbe53c-3304-445f-8580-8a0febde6ed8",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
