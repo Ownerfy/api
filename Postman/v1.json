@@ -633,6 +633,18 @@
 		},
 		{
 			"name": "Get QR code to OpenSea",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "3dd71e82-00fd-4f83-8e1a-1ad26af2efa7",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "e5d9d2c7-a401-475c-8d9e-263aefb2a2a6",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -909,34 +921,34 @@
 	],
 	"variable": [
 		{
-			"id": "81fc58c9-844a-45fb-8edb-d9ef431100ea",
+			"id": "0765ba22-a91e-437e-9234-d2bd7eeed61c",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "3c2ca5c2-ad8d-4ddc-ae08-b97b8d82c9a4",
+			"id": "441247a1-879d-46e0-939e-628704703a55",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "fc515d36-dfae-46c5-b83a-b235f1a3bd31",
+			"id": "f4657769-c31a-49ad-833f-e90e99761344",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "5f8601e4-e13f-4969-8099-e5989622baf6",
+			"id": "398f2b92-4738-4ff8-9fee-0d7598224a0b",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "7406d8a2-edba-4d91-8e54-fe396cd54aaa",
+			"id": "4b01f613-fdba-446b-9725-01e8a90d8c94",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "92650a80-ffd8-442f-b792-6580c19abb0d",
+			"id": "bb073472-d418-4be7-abcd-4374f28ffb79",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
