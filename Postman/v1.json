@@ -417,6 +417,18 @@
 		},
 		{
 			"name": "Get NFTs for Public Address",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fec756be-95cc-4063-b73d-8cd6d2edf99b",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "a36355b1-0e6f-4a2e-aea1-44bdf5074215",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -849,34 +861,34 @@
 	],
 	"variable": [
 		{
-			"id": "92a8c57a-cc80-44bb-9dac-f2e822f86989",
+			"id": "e4fa2093-dd7c-4d37-acb1-27dacf2025b8",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "e95e1e9a-7b2f-4f5a-a6cb-97e27f11f2f5",
+			"id": "694b53d0-d3f9-4fc5-9616-b281d32ca43d",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "14fa9085-18fc-40ed-801f-a88fe8e888a7",
+			"id": "bdd9dc5c-0f2a-484c-80dd-afee977e8a18",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "485fd97e-bd50-4ac7-8776-a5e5610dee40",
+			"id": "e0c0f66e-dea9-4714-b50f-048cf42cde59",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "b395e439-90d8-447c-9e79-8b1174beff0a",
+			"id": "88039c79-9fab-4196-9369-21feb56f3303",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "ae96fdf2-c76a-4cf2-b337-149faeab8141",
+			"id": "37b8e62b-1c4d-4407-8126-fd3bcdeb0d93",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
