@@ -723,6 +723,18 @@
 		},
 		{
 			"name": "Mint NFTs",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "99b43ffa-dd00-49a7-b625-ece19c76be08",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "2b84a1fe-729f-43c2-b4d5-c08d592b9fa1",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -933,34 +945,34 @@
 	],
 	"variable": [
 		{
-			"id": "789c1b0f-2b3f-4953-bfdc-c8c2ba592f41",
+			"id": "dbcb89b5-9c61-408a-a77a-cf73b72eeed7",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "1e4adc07-6440-4b26-bb84-e34dd7b8c47a",
+			"id": "69228d39-abb6-4abb-9a21-449a93fb6a67",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "7509dc55-0ff1-4e6d-8667-a8a5054ea2e2",
+			"id": "7bf7e360-5751-4552-b626-7d6652db95c3",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "6ebc864a-7fae-456d-938e-4efe9c14d65f",
+			"id": "d669dbb7-36a3-429c-acd6-a5f71a609f43",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "272ef03d-d496-402d-8f96-2f653075d97c",
+			"id": "abe0f9a5-2422-4727-a9a1-2235d704c22a",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "818b7ca3-e527-4056-a8c7-1442eeb97f60",
+			"id": "928958e4-d355-4d7f-8a9b-ad9c2b37ba95",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
