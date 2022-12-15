@@ -24,7 +24,7 @@
 					"script": {
 						"id": "ed7e2ec0-e932-4310-a841-e4a889883b73",
 						"exec": [
-							""
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
 						],
 						"type": "text/javascript"
 					}
@@ -807,34 +807,34 @@
 	],
 	"variable": [
 		{
-			"id": "f7cf691d-0398-4b66-99ec-3a7a3dc871c0",
+			"id": "331c0a5a-8d47-425b-b80c-6b507bdb0fe0",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "b2835854-f093-4b3f-9cdb-4a16756de13f",
+			"id": "a3cc3287-b98e-4bd5-a223-988e83565bd6",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "367e56c3-4703-4ea7-9f55-484ed874caa2",
+			"id": "a270526b-6829-4a35-af70-dbc5b8d3263e",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "a90530bd-b29c-4575-82f0-51cfeec1b4ee",
+			"id": "3505ca15-1b76-4b8e-b778-554c4b01e198",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "26e4e691-64f8-41e7-8282-47766f1be2f5",
+			"id": "a998661a-2bf0-4ae0-897f-d1cc950d5bc6",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "8ff56730-372a-4b09-bfcf-9fc19ae75606",
+			"id": "ab24d9b2-52d5-4c1f-9baa-4ed6a4fe33a9",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
