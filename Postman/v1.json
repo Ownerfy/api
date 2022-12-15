@@ -850,6 +850,18 @@
 		},
 		{
 			"name": "Send Verification Code to NFT Owner",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "71416274-d43d-4a26-8a6b-efef86f42c6a",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "350cc242-ac1e-4772-918d-75a7b652253f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -957,34 +969,34 @@
 	],
 	"variable": [
 		{
-			"id": "d616c4f0-19f6-4432-b4c8-a697819aacf9",
+			"id": "46485f99-c867-4e58-96b6-3ff35579988b",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "52434e5d-b223-4848-90ca-94d0624659f2",
+			"id": "a072aa48-40e3-4a9e-a539-34a806520c3f",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "623b0171-7286-474f-a6e4-9706a59ddb4c",
+			"id": "a51409c4-e369-4c72-9264-92e34a8fbbb8",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "9e8d808f-9dc0-497e-9747-9744434e6748",
+			"id": "2d276d15-9e25-4608-988a-59d424990ca5",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "e8ed2b67-e307-495a-a3e8-07e14dd42e4e",
+			"id": "1a8218c1-2dc9-4a17-8b86-ef6a884cc787",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "d7cd6c4d-3eee-4be3-b9dd-40b21c1e4491",
+			"id": "b5075fa9-ad1a-4450-89f5-9af1ed0ec622",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
