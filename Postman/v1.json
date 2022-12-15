@@ -560,6 +560,18 @@
 		},
 		{
 			"name": "Get All Contracts Created",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "aad6d5a4-f5c2-439f-934b-e888acd00cbb",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "2115b4c6-0136-4f7d-9d15-32d2851c4bdd",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -885,34 +897,34 @@
 	],
 	"variable": [
 		{
-			"id": "5e96ad3a-5711-477f-abeb-844596830330",
+			"id": "bea880d8-5bcd-4fd7-8c8c-7b7b26435f0f",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "862f1361-8411-4938-9837-3d5f1ce284e7",
+			"id": "8125264e-fd3c-44a9-ae54-cf3852047bd8",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "6866c236-a2bd-4c53-8af8-ccefc4788663",
+			"id": "10cf75ad-769e-4c1f-9e99-33c8aa685841",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "b5e960f5-7128-4690-97e4-8c74163ac7b7",
+			"id": "2bb873b0-1117-4874-878c-ced802fead8a",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "f24fa0c4-034b-4c33-8862-a82a00a86f49",
+			"id": "5af6ac67-9780-42c0-bf25-684512f72a55",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "009d87e4-ab73-42c2-8e8b-c62077131776",
+			"id": "34f3b90b-b2c1-430d-9e3e-fde5ee887a6c",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
