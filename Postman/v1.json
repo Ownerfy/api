@@ -681,6 +681,18 @@
 		},
 		{
 			"name": "Generate Custom QR",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "88409340-149e-47d0-8925-9f50eb50276b",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "30ccf331-9c22-4182-b679-c2366ca061dc",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -921,34 +933,34 @@
 	],
 	"variable": [
 		{
-			"id": "0765ba22-a91e-437e-9234-d2bd7eeed61c",
+			"id": "789c1b0f-2b3f-4953-bfdc-c8c2ba592f41",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "441247a1-879d-46e0-939e-628704703a55",
+			"id": "1e4adc07-6440-4b26-bb84-e34dd7b8c47a",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "f4657769-c31a-49ad-833f-e90e99761344",
+			"id": "7509dc55-0ff1-4e6d-8667-a8a5054ea2e2",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "398f2b92-4738-4ff8-9fee-0d7598224a0b",
+			"id": "6ebc864a-7fae-456d-938e-4efe9c14d65f",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "4b01f613-fdba-446b-9725-01e8a90d8c94",
+			"id": "272ef03d-d496-402d-8f96-2f653075d97c",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "bb073472-d418-4be7-abcd-4374f28ffb79",
+			"id": "818b7ca3-e527-4056-a8c7-1442eeb97f60",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
