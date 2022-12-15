@@ -461,6 +461,18 @@
 		},
 		{
 			"name": "Get Company Owned NFTs",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a2e5a5bd-7b79-4d1c-b677-83be81956249",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "de153aae-e619-4ed0-8f90-372a33092b23",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -861,34 +873,34 @@
 	],
 	"variable": [
 		{
-			"id": "e4fa2093-dd7c-4d37-acb1-27dacf2025b8",
+			"id": "2795f313-885b-4c2a-8569-ba454765768f",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "694b53d0-d3f9-4fc5-9616-b281d32ca43d",
+			"id": "1524e16f-3d62-47ce-8ed8-896a955f13ef",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "bdd9dc5c-0f2a-484c-80dd-afee977e8a18",
+			"id": "c9d2af43-15b6-4ca5-aec0-1c9fba4d14ef",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "e0c0f66e-dea9-4714-b50f-048cf42cde59",
+			"id": "6579d3f0-ed9f-4ef9-9658-4a86670ee6d0",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "88039c79-9fab-4196-9369-21feb56f3303",
+			"id": "053421bc-f1d0-41e6-8876-da3c27b89684",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "37b8e62b-1c4d-4407-8126-fd3bcdeb0d93",
+			"id": "acc32da7-1ace-4a83-9422-1cf2c2163921",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
