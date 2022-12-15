@@ -930,6 +930,18 @@
 		},
 		{
 			"name": "Create Collection (Smart Contract)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5527857e-cda9-4515-aa86-4b973cf3191c",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "2dd66323-83ca-457d-8074-0bf079c598ee",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -981,34 +993,34 @@
 	],
 	"variable": [
 		{
-			"id": "945629f8-eea2-4e0a-8954-bbe1a30849ae",
+			"id": "828da6fe-0e79-46b1-a83d-715a20dfe403",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "00318ab8-8ccd-4c51-aefc-c04c64763f9a",
+			"id": "e0faa8e5-b797-49f8-a374-a6637410d611",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "6bf262c0-563f-491c-b80e-1c244d51b0b7",
+			"id": "d06b6987-d467-42e0-9cc5-c2a4fccf1999",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "d296c218-c8cc-4b9f-bd7d-cf0f2cf4efa3",
+			"id": "98b1bcff-f024-4dd9-8f2f-aecc1a90a770",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "8e593adc-840c-437b-964f-2bd99878bfb6",
+			"id": "71908087-b609-43e3-9aa8-f2c4881638f2",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "d1a8d9fc-779e-4bc1-a769-6418eabb2017",
+			"id": "9362b3b0-6d1a-4d79-b20a-2b2ed23988b9",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
