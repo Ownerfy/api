@@ -492,6 +492,18 @@
 		},
 		{
 			"name": "Get Single NFT Metadata and Current Owner(s)",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d6e5a626-5329-4c92-9f2a-a97cdb743f2c",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "3fdc5540-f5b9-48c3-b786-46927cde52ae",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -873,34 +885,34 @@
 	],
 	"variable": [
 		{
-			"id": "2795f313-885b-4c2a-8569-ba454765768f",
+			"id": "5e96ad3a-5711-477f-abeb-844596830330",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "1524e16f-3d62-47ce-8ed8-896a955f13ef",
+			"id": "862f1361-8411-4938-9837-3d5f1ce284e7",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "c9d2af43-15b6-4ca5-aec0-1c9fba4d14ef",
+			"id": "6866c236-a2bd-4c53-8af8-ccefc4788663",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "6579d3f0-ed9f-4ef9-9658-4a86670ee6d0",
+			"id": "b5e960f5-7128-4690-97e4-8c74163ac7b7",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "053421bc-f1d0-41e6-8876-da3c27b89684",
+			"id": "f24fa0c4-034b-4c33-8862-a82a00a86f49",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "acc32da7-1ace-4a83-9422-1cf2c2163921",
+			"id": "009d87e4-ab73-42c2-8e8b-c62077131776",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
