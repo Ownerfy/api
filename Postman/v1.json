@@ -750,7 +750,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // If not supplied this will mint to your default smart contract created with your admin account otherwise use any smart contract you create in the api \n    \"fromOwnerfyUserId\": \"LlZw4R1hwqojvjvcspCm\", // Optional only if using a contract created by a subuser. Only the wallet that created a contract can mint to it.\n    //\"fromAddress\": \"0x037f3812d21c669d3fcc54cdbdea8e3091dd995b\", // Use either this or fromOwnerfyUserId. Only wallets that were created on your account are valid\n    \"nfts\": [ // Up to 10 per request\n        {\n            \"name\": \"test 1\",\n            \"description\": \"test description 1\",\n            \"image\": \"https://firebasestorage.googleapis.com/v0/b/receiptcoin-receiptchain-de560.appspot.com/o/website%2Fnftdemo%2Fownerfy-icon-app.jpg?alt=media&token=594784fe-04c4-4307-8021-83826daab59c\",\n            \"attributes\": [\n                {\"trait_type\": \"Level\", \"value\": \"10\"},{\"trait_type\": \"Hair Color\", \"value\": \"Brown\"}\n                ] // Optional attributes show up as separate parsable values. Values can be numbers but must always be in quotes as strings. Any number of attributes can be added. This is the standard NFT metadata format for attributes.\n        },\n        {\n            \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // Contract can be specified per NFT as well\n            \"toAddress\": \"0xd6d6796c84ca569a54cb82337b31a7e4d27b32af\", // Ether send to an ETH address or OwnerfyUserId - External Addresses OK\n            //\"toOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\", // Optionally mint directly to a user\n            \"name\": \"test 2\",\n            \"description\": \"test description 2\",\n            \"image\": \"https://firebasestorage.googleapis.com/v0/b/receiptcoin-receiptchain-de560.appspot.com/o/website%2Fnftdemo%2Fownerfy-icon-app.jpg?alt=media&token=594784fe-04c4-4307-8021-83826daab59c\",\n            \"clientTokenId\": 12348 // Optional marker that will be passed back\n        }\n    ]\n}",
+					"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // If not supplied this will mint to your default smart contract created with your admin account otherwise use any smart contract you create in the api \n    \"fromOwnerfyUserId\": \"LlZw4R1hwqojvjvcspCm\", // Optional only if using a contract created by a subuser. Only the wallet that created a contract can mint to it.\n    //\"fromAddress\": \"0x037f3812d21c669d3fcc54cdbdea8e3091dd995b\", // Use either this or fromOwnerfyUserId. Only wallets that were created on your account are valid\n    \"nfts\": [ // Up to 10 per request\n        {\n            \"name\": \"test 1\",\n            \"description\": \"test description 1\",\n            \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/receiptcoin-receiptchain-de560.appspot.com/o/website%2Fnftdemo%2Fownerfy-icon-app.jpg?alt=media&token=594784fe-04c4-4307-8021-83826daab59c\",\n            \"attributes\": [\n                {\"trait_type\": \"Level\", \"value\": \"10\"},{\"trait_type\": \"Hair Color\", \"value\": \"Brown\"}\n                ] // Optional attributes show up as separate parsable values. Values can be numbers but must always be in quotes as strings. Any number of attributes can be added. This is the standard NFT metadata format for attributes.\n        },\n        {\n            \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // Contract can be specified per NFT as well\n            \"toAddress\": \"0xd6d6796c84ca569a54cb82337b31a7e4d27b32af\", // Ether send to an ETH address or OwnerfyUserId - External Addresses OK\n            //\"toOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\", // Optionally mint directly to a user\n            \"name\": \"test 2\",\n            \"description\": \"test description 2\",\n            \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/receiptcoin-receiptchain-de560.appspot.com/o/website%2Fnftdemo%2Fownerfy-icon-app.jpg?alt=media&token=594784fe-04c4-4307-8021-83826daab59c\",\n            \"clientTokenId\": 12348 // Optional marker that will be passed back\n        }\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -993,34 +993,34 @@
 	],
 	"variable": [
 		{
-			"id": "a4334e55-1385-41e3-b15a-a50e723af0dd",
+			"id": "f835c2ad-352f-46f5-b6af-52ecdf468653",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "d48fe21e-a94e-4c59-846b-9ea6932575af",
+			"id": "febca17f-917b-4f68-b6f8-f304765c5503",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "552e4c09-5d35-42af-bb02-80a8ddb257cc",
+			"id": "e0bcd383-f1a9-4fad-a76c-a7c886bf3dbd",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "13394261-c0f1-48c1-8f2b-2644e745859b",
+			"id": "854f3fca-bcee-4c69-a060-0c96e27cc7bc",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "fa554d52-84aa-465c-bdc2-487f4d4c5834",
+			"id": "8d532dda-1950-4d55-9467-21241cb8af89",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "72a8f9d6-6d01-4d9b-a5cd-6ede4d65a476",
+			"id": "3a646cf2-59ff-431c-860e-17b06360fa1a",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
