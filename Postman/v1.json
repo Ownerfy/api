@@ -791,7 +791,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n    \"nfts\": [\n        {\n            \"toOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\",\n            \"name\": \"test mint B\",\n            \"description\": \"test description B\",\n            \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\"\n        }\n    ]\n}",
+							"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n    \"nfts\": [\n        {\n            \"toOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\",\n            \"name\": \"test mint B\",\n            \"description\": \"test description B\",\n            \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/receiptcoin-receiptchain-de560.appspot.com/o/website%2Fnftdemo%2Fownerfy-icon-app.jpg?alt=media&token=594784fe-04c4-4307-8021-83826daab59c\"\n        }\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -993,34 +993,34 @@
 	],
 	"variable": [
 		{
-			"id": "931219f9-fd33-47ae-90a9-243d68561a89",
+			"id": "a4334e55-1385-41e3-b15a-a50e723af0dd",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "588f1f59-7bc3-4349-8bfc-07b85d4ae4c3",
+			"id": "d48fe21e-a94e-4c59-846b-9ea6932575af",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "4926fa89-8cc5-4e4c-b08b-b710c19f7662",
+			"id": "552e4c09-5d35-42af-bb02-80a8ddb257cc",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "eeb6f481-cb6c-4c10-b9f5-77dea82ea50a",
+			"id": "13394261-c0f1-48c1-8f2b-2644e745859b",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "7f0b4aff-1fae-4543-b2e0-52d2517a6da4",
+			"id": "fa554d52-84aa-465c-bdc2-487f4d4c5834",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "b806cdb3-6310-497f-9b6a-6c17c1d8e09b",
+			"id": "72a8f9d6-6d01-4d9b-a5cd-6ede4d65a476",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
