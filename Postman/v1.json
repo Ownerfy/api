@@ -768,7 +768,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n    \"nfts\": [\n        {\n            \"name\": \"test mint A\",\n            \"description\": \"test description A\",\n            \"image\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\"\n        },\n    ]\n}",
+							"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n    \"nfts\": [\n        {\n            \"name\": \"test mint A\",\n            \"description\": \"test description A\",\n            \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\"\n        },\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -993,34 +993,34 @@
 	],
 	"variable": [
 		{
-			"id": "b6fdf7df-1439-41e0-b744-17915b000dc3",
+			"id": "3d321af5-ca1d-46b3-b02a-9526e954b488",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "722bfb57-1316-42ec-9686-0523821337fa",
+			"id": "45870732-cfa3-4c8b-96de-d097304a1260",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "5e26903a-112e-4da1-a0bd-71afd2f7960a",
+			"id": "0a6dba14-f2ce-4d9e-8c99-bff58c5fb40b",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "c02341fe-b304-4888-ac6d-05ff89bcbbda",
+			"id": "a53b7e60-b856-4dbe-aaff-b0b23aa26c87",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "a4de099a-7d53-436e-8369-4e98a01a210b",
+			"id": "2c092394-15e0-48a2-9af2-8fc6b31f846c",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "49d3cf20-39ad-453e-9166-f41104b56896",
+			"id": "5628f6ea-5d25-4794-9185-774de6f7fca0",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
