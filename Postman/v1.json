@@ -335,12 +335,6 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": {
-						"token": ""
-					}
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -987,12 +981,12 @@
 	],
 	"variable": [
 		{
-			"id": "3251b8fb-61f9-490f-8607-254744d296e6",
+			"id": "799de372-d5b8-42cc-8da8-4f4b20b07b38",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "898b7e03-fb9b-4bcc-8d54-ddd6500c16b6",
+			"id": "9624d595-e5a0-42e2-9922-b419e7de46fc",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
