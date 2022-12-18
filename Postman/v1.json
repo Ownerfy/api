@@ -966,14 +966,14 @@
 	"auth": {
 		"type": "bearer",
 		"bearer": {
-			"token": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
+			"token": "x0000000-0000-0000-0000-0000000000"
 		}
 	},
 	"event": [
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "6ed0fa68-e71e-414f-bba3-d9a7edff5a99",
+				"id": "3744cdb2-0853-4f00-831c-c5f7923e6964",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -983,7 +983,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "72c5c3f1-b03d-43f3-8fda-a039c6d89d35",
+				"id": "5ec7f210-4315-4ae5-a1b7-e315004d2fc3",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -993,34 +993,34 @@
 	],
 	"variable": [
 		{
-			"id": "f835c2ad-352f-46f5-b6af-52ecdf468653",
+			"id": "29ec8be3-b1aa-4917-905c-423ef856babb",
 			"key": "dev_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000"
 		},
 		{
-			"id": "febca17f-917b-4f68-b6f8-f304765c5503",
+			"id": "ff149331-96a3-42c9-b6f4-9bd73ad7e551",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "e0bcd383-f1a9-4fad-a76c-a7c886bf3dbd",
+			"id": "52e2af64-8cde-40e0-a457-589beb3095e8",
 			"key": "local_root",
 			"value": "http://localhost:5000/receiptchain-dev/us-central1/app"
 		},
 		{
-			"id": "854f3fca-bcee-4c69-a060-0c96e27cc7bc",
+			"id": "9c751812-6e53-4118-b1df-b14bab06e1b0",
 			"key": "prod_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "8d532dda-1950-4d55-9467-21241cb8af89",
+			"id": "a4422c1e-57bb-47f5-8464-9ab3517410b6",
 			"key": "place_holder_token",
 			"value": "4c3576b8-a226-4bb5-a7d6-8a8ddbff0000",
 			"type": "string"
 		},
 		{
-			"id": "3a646cf2-59ff-431c-860e-17b06360fa1a",
+			"id": "78d4270b-e68d-46b2-88a2-8a17a268bd7b",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
