@@ -790,6 +790,16 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8f7581fe-99f6-4139-9ed6-17e13361b122",
+						"exec": [
+							"if (pm?.request?.body?.options?.raw?.language === 'json') { const rawData = pm.request.body.toString(); const strippedData = rawData.replace( /\\\\\"|\"(?:\\\\\"|[^\"])*\"|(\\/\\/.*|\\/\\*[\\s\\S]*?\\*\\/)/g, (m, g) => g ? \"\" : m ); pm.request.body.update(JSON.stringify(JSON.parse(strippedData))); }"
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
 			"id": "cff803ef-5c4c-49ce-826e-2f54bc0deccb",
@@ -945,12 +955,12 @@
 	],
 	"variable": [
 		{
-			"id": "1f5932ff-a603-4607-9262-669e04f1d685",
+			"id": "fcd260d0-073b-43c6-8a9a-1d0fb3e6f491",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "40dbf572-1fc2-4a73-a3c4-bae1ec6539a1",
+			"id": "ba6e844a-204a-4d38-8d52-ee75388ac63e",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
