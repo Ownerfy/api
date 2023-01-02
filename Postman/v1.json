@@ -829,12 +829,6 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": {
-						"token": "f5e3ab56-eea3-426c-b324-5a8193c1e47a"
-					}
-				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -846,7 +840,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:5000/receiptchain-dev/us-central1/app/api/v1/nft/update"
+				"url": "{{server_root}}/app/api/v1/nft/update"
 			},
 			"response": [
 				{
@@ -1030,12 +1024,12 @@
 	],
 	"variable": [
 		{
-			"id": "25f8595b-2151-4413-8160-744c7b796e6e",
+			"id": "c639fa94-dc5e-4399-9bb0-91ec0b2ac220",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "6344a0f8-4753-438d-8caa-8a0b7606c847",
+			"id": "f6c47b14-44bd-45f9-9c5b-fa29c11ed48f",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
