@@ -833,7 +833,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"contract\": \"0x938bc8b1355F5F14E174Db9A3b8C826344ff7dEd\",\n     \"blockchainTokenId\" : \"23365938186\",\n    \"name\": \"test 1 new name\",\n    \"description\": \"test new description 1\",\n    \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\",\n    \"attributes\": [{\"trait_type\": \"level\", \"value\": \"10\"}]\n       \n}",
+					"raw": "{\n    \"contract\": \"0x938bc8b1355F5F14E174Db9A3b8C826344ff7dEd\",\n     \"blockchainTokenId\" : \"23365938186\",\n    \"name\": \"New name\",\n    \"description\": \"New Description\",\n    \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\",\n    \"attributes\": [{\"trait_type\": \"level\", \"value\": \"11\"}]\n       \n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1024,12 +1024,12 @@
 	],
 	"variable": [
 		{
-			"id": "c639fa94-dc5e-4399-9bb0-91ec0b2ac220",
+			"id": "0d02d112-04b8-4838-adda-7446787849bc",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "f6c47b14-44bd-45f9-9c5b-fa29c11ed48f",
+			"id": "697577a6-b843-4001-a457-7deb766ba39f",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
