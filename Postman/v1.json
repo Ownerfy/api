@@ -823,6 +823,81 @@
 			"response": []
 		},
 		{
+			"name": "Update Metadata",
+			"id": "757a564c-5545-4cf0-ade2-8b09a3fd25ab",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "f5e3ab56-eea3-426c-b324-5a8193c1e47a"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"contract\": \"0x938bc8b1355F5F14E174Db9A3b8C826344ff7dEd\",\n     \"blockchainTokenId\" : \"23365938186\",\n    \"name\": \"test 1 new name\",\n    \"description\": \"test new description 1\",\n    \"imageUrl\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\",\n    \"attributes\": [{\"trait_type\": \"level\", \"value\": \"10\"}]\n       \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5000/receiptchain-dev/us-central1/app/api/v1/nft/update"
+			},
+			"response": [
+				{
+					"id": "791ac10a-bb88-4eed-b4a3-876f33519683",
+					"name": "Mint an NFT and leave it in the company account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n    \"nfts\": [\n        {\n            \"name\": \"test mint A\",\n            \"description\": \"test description A\",\n            \"image\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\"\n        },\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server_root}}/api/v1/nft/create"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				},
+				{
+					"id": "aec9e2ab-9130-49f6-a631-9f45ea15e3e9",
+					"name": "Mint an NFT to a previously created user account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n    \"nfts\": [\n        {\n            \"toOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\",\n            \"name\": \"test mint B\",\n            \"description\": \"test description B\",\n            \"image\": \"https://firebasestorage.googleapis.com/v0/b/receiptchain-dev.appspot.com/o/images%2Fwwdemo.png?alt=media&token=0bac79cf-8466-426a-bcc9-774637e3f69e\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{server_root}}/api/v1/nft/create"
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"responseTime": null,
+					"body": null
+				}
+			]
+		},
+		{
 			"name": "Send Verification Code to NFT Owner",
 			"event": [
 				{
@@ -955,12 +1030,12 @@
 	],
 	"variable": [
 		{
-			"id": "fcd260d0-073b-43c6-8a9a-1d0fb3e6f491",
+			"id": "25f8595b-2151-4413-8160-744c7b796e6e",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "ba6e844a-204a-4d38-8d52-ee75388ac63e",
+			"id": "6344a0f8-4753-438d-8caa-8a0b7606c847",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
