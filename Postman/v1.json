@@ -811,7 +811,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // Specifiy contract for all or override below\n    \"fromOwnerfyUserId\": \"LlZw4R1hwqojvjvcspCm\", // Only the wallet that owns a token can send it.\n    //\"fromAddress\": \"0x037f3812d21c669d3fcc54cdbdea8e3091dd995b\", // Use either this or fromOwnerfyUserId.\n    \"nfts\": [ // Up to 10 at a time\n        {\n            \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n            \"blockchainTokenId\": \"12387344\", \n            \"toAddress\": \"0xc0faB703eBB1EF59a015b921D04232bEcb1Bc5B1\", // Can use any external ethereum or polygon address\n            // Optionally use this or toOwnerfyUserId\n            //\"toOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\",  // Optionally use this or to address\n            \"fromAddress\": \"0x037f3812d21c669d3fcc54cdbdea8e3091dd995b\" // Must be a managed from address. Overrides parent from address.\n            //\"fromOwnerfyUserId\": \"LlZw4R1hwqojvjvcspCm\" // Overrides parent key\n            \n        }\n    ]\n}",
+					"raw": "{\n    \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\", // Specifiy contract for all or override below\n    \"fromOwnerfyUserId\": \"LlZw4R1hwqojvjvcspCm\", // Only the wallet that owns a token can send it.\n    //\"fromAddress\": \"0x037f3812d21c669d3fcc54cdbdea8e3091dd995b\", // Use either this or fromOwnerfyUserId.\n    \"nfts\": [ // Up to 100 at a time\n        {\n            \"contract\": \"0x6aC3beCE6DA0af3E30b1af95F0B5f67140b7353B\",\n            \"blockchainTokenId\": \"12387344\", \n            \"toAddress\": \"0xc0faB703eBB1EF59a015b921D04232bEcb1Bc5B1\", // Can use any external ethereum or polygon address\n            // Optionally use this or toOwnerfyUserId\n            //\"toOwnerfyUserId\": \"JbjLtR6wDmldHVUOXOev\",  // Optionally use this or to address\n            \"fromAddress\": \"0x037f3812d21c669d3fcc54cdbdea8e3091dd995b\" // Must be a managed from address. Overrides parent from address.\n            //\"fromOwnerfyUserId\": \"LlZw4R1hwqojvjvcspCm\" // Overrides parent key\n            \n        }\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1024,12 +1024,12 @@
 	],
 	"variable": [
 		{
-			"id": "7ca4bd63-4233-44bc-acd5-4e16229cca58",
+			"id": "ade62ede-44a3-46fd-8d29-ffbffb43adb4",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "b85eae7a-39c2-413c-9b3f-039e9cd0e672",
+			"id": "1efdb6c4-a1b4-46a0-91a3-1b2687e135ae",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
