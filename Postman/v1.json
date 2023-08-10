@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Create User (Wallet)",
+			"name": "Create Wallet (User)",
 			"event": [
 				{
 					"listen": "test",
@@ -1024,12 +1024,12 @@
 	],
 	"variable": [
 		{
-			"id": "c52ba8f6-cbda-405e-aeb2-4379b692eec5",
+			"id": "cb821663-bc7f-4b88-bfbe-64f071bb1479",
 			"key": "api_root",
 			"value": "https://ownerfy.com"
 		},
 		{
-			"id": "fc7ba5f0-ad34-4061-998c-0b2fff470224",
+			"id": "ed0adc41-5381-40bf-821a-54c38ee93d37",
 			"key": "server_root",
 			"value": "https://ownerfy.com/api/v1",
 			"type": "string"
